@@ -45,6 +45,7 @@ def calc_pictorial_ratio(driver, screenshot):
     print("Getting position and size of //img")
     image_area = 0 # 画像存在領域の合計
     images = driver.find_elements_by_xpath('//img')
+    print(images)
     for image in images:
         try: # 正常処理
             if str(image.is_displayed()) == "True": #表示されている時のみリストに挿入
